@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/products/
+    - assets/texts/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -93,6 +94,7 @@ flutter_assets:
   assets_path:
     - assets/products/
     - assets/icons/
+    - assets/texts/
   output_path: lib/Core/utils/
   filename: app_assets.dart
   field_prefix:

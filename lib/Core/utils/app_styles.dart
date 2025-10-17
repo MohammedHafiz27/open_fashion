@@ -35,7 +35,7 @@ abstract class AppStyles {
   static TextStyle bodyLarge(BuildContext context) {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
-      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'TenorSans',
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
@@ -45,7 +45,7 @@ abstract class AppStyles {
   static TextStyle bodyMedium(BuildContext context) {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyMedium?.color,
-      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontFamily: 'TenorSans',
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
@@ -55,7 +55,7 @@ abstract class AppStyles {
   static TextStyle bodySmall(BuildContext context) {
     return TextStyle(
       color: Theme.of(context).textTheme.bodySmall?.color,
-      fontSize: getResponsiveFontSize(context, fontSize: 12),
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'TenorSans',
       fontWeight: FontWeight.w400,
       letterSpacing: 0,

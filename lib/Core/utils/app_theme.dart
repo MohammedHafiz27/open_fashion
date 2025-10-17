@@ -5,5 +5,10 @@ class AppTheme {
   static final darkTheme = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColors.titleActive,
     appBarTheme: AppBarTheme(backgroundColor: AppColors.offWhite),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(color: AppColors.offWhite),
+      bodyMedium: TextStyle(color: AppColors.placeholder),
+      bodySmall: TextStyle(color: AppColors.primary),
+    ),
   );
 }

@@ -157,4 +157,16 @@ class AppAssets {
   /// Assets for productsRecycleBoucleKnitCardigan Pink
   /// assets/products/RecycleBoucleKnitCardigan Pink.png
   static const String productsRecycleBoucleKnitCardiganPink = "assets/products/RecycleBoucleKnitCardigan Pink.png";
+
+  /// Assets for texts10
+  /// assets/texts/10.svg
+  static const String texts10 = "assets/texts/10.svg";
+
+  /// Assets for textsCollection
+  /// assets/texts/Collection.svg
+  static const String textsCollection = "assets/texts/Collection.svg";
+
+  /// Assets for textsOctober
+  /// assets/texts/October.svg
+  static const String textsOctober = "assets/texts/October.svg";
 }
