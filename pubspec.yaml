@@ -86,3 +86,11 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_assets:
+  assets_path:
+    - assets/products/
+    - assets/icons/
+  output_path: lib/Core/utils/
+  filename: app_assets.dart
+  field_prefix:
+  classname: AppAssets
