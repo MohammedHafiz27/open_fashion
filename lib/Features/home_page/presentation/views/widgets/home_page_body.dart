@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:open_fashion/Core/utils/app_assets.dart';
 import 'package:open_fashion/Features/home_page/presentation/views/widgets/first_image_cover.dart';
 import 'package:open_fashion/Features/home_page/presentation/views/widgets/product_sliver_grid.dart';
+import 'package:open_fashion/Features/home_page/presentation/views/widgets/you_may_also_like_section.dart';
 
 class HomePageBody extends StatelessWidget {
   const HomePageBody({super.key});
@@ -24,14 +25,16 @@ class HomePageBody extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          top: size.height * 0.12,
           left: 0,
           right: 0,
           child: CustomScrollView(
             slivers: [
+              SliverToBoxAdapter(child: SizedBox(height: 120)),
               SliverToBoxAdapter(child: FirstImageCover(size: size)),
               SliverToBoxAdapter(child: SizedBox(height: 20)),
               ProductSliverGrid(),
+              SliverToBoxAdapter(child: SizedBox(height: 20)),
+              SliverToBoxAdapter(child: YouMayAlsoLikeSection()),
             ],
           ),
         ),

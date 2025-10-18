@@ -62,6 +62,8 @@ class AppAssets {
   /// assets/icons/Heart.svg
   static const String iconsHeart = "assets/icons/Heart.svg";
 
+  static const String iconsLine = "assets/icons/line.svg";
+
   /// Assets for iconsIronLowTemperature
   /// assets/icons/IronLowTemperature.svg
   static const String iconsIronLowTemperature = "assets/icons/IronLowTemperature.svg";
