@@ -8,5 +8,6 @@ class CollectionModel {
   static final List<CollectionModel> collectionItems = [
     CollectionModel(image: AppAssets.productsCover3, title: "HAE BY HAEKIM"),
     CollectionModel(image: AppAssets.productsCover2, title: "Black collection"),
+    CollectionModel(image: AppAssets.productsCover1, title: "White collection"),
   ];
 }
