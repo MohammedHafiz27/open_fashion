@@ -28,8 +28,13 @@ class GridProductItem extends StatelessWidget {
           ],
         ),
         Text(productModel.title, style: AppStyles.bodyLarge(context)),
-        Text(productModel.description, style: AppStyles.bodyMedium(context)),
-        Text(productModel.price, style: AppStyles.bodySmall(context)),
+        Text(
+          productModel.description,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: AppStyles.bodyMedium(context),
+        ),
+        Text("\$${productModel.price}", style: AppStyles.bodySmall(context)),
       ],
     );
   }

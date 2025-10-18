@@ -29,7 +29,7 @@ class HomePageBody extends StatelessWidget {
           left: 0,
           right: 0,
           child: CustomScrollView(
-            physics: AlwaysScrollableScrollPhysics(),
+            physics: ClampingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(child: SizedBox(height: 120)),
               SliverToBoxAdapter(child: FirstImageCover(size: size)),
