@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:open_fashion/Features/checkout_page/presentation/views/checkout_page.dart';
+import 'package:open_fashion/Features/home_page/data/models/product_model.dart';
 import 'package:open_fashion/Features/home_page/presentation/views/home_page.dart';
 import 'package:open_fashion/Features/splash_screen/presentation/views/splash_screen.dart';
 
 abstract class AppRoute {
   static const String splashScreen = '/';
   static const String homeScreen = '/homeScreen';
+  static const String checkoutScreen = '/checkoutScreen';
   static GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -18,6 +21,12 @@ abstract class AppRoute {
             path: AppRoute.homeScreen,
             builder: (BuildContext context, GoRouterState state) {
               return const HomePage();
+            },
+          ),
+          GoRoute(
+            path: AppRoute.checkoutScreen,
+            builder: (BuildContext context, GoRouterState state) {
+              return CheckoutPage(productModel: state.extra as ProductModel);
             },
           ),
         ],
