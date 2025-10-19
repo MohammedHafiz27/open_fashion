@@ -4,9 +4,10 @@ import 'package:open_fashion/Core/utils/app_colors.dart';
 import 'package:open_fashion/Core/utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.title, required this.icon});
+  const CustomButton({super.key, required this.title, required this.icon, required this.onPressed});
   final String title;
   final String? icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
         minimumSize: Size(MediaQuery.sizeOf(context).width, 60),
         backgroundColor: AppColors.titleActive,
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         spacing: 16,
         mainAxisAlignment: MainAxisAlignment.center,
