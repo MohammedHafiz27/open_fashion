@@ -3,7 +3,7 @@ import 'package:open_fashion/Core/utils/app_colors.dart';
 
 class AppTheme {
   static final darkTheme = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: AppColors.titleActive,
+    scaffoldBackgroundColor: AppColors.offWhite,
     appBarTheme: AppBarTheme(backgroundColor: AppColors.offWhite),
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: AppColors.offWhite),

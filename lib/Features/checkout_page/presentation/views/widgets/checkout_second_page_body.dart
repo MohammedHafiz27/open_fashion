@@ -24,8 +24,8 @@ class CheckoutSecondPageBody extends StatelessWidget {
               children: [
                 Header(title: 'checkout'),
                 Text("Shipping adress".toUpperCase(), style: AppStyles.bodyMedium(context)),
-                AdressSection(),
-                ButtonMethods(),
+                orderModel.addressModel != null ? AdressSection(orderModel: orderModel) : SizedBox.shrink(),
+                ButtonMethods(orderModel: orderModel),
                 const Spacer(),
                 TotalRow(title: 'Total:', totalPrice: orderModel.totalPrice),
                 const SizedBox(height: 16),

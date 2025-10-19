@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.titleActive,
       appBar: CustomAppBar(iconsColor: AppColors.offWhite, backgroundColor: AppColors.titleActive),
       body: Padding(padding: const EdgeInsets.symmetric(horizontal: 8), child: HomePageBody()),
     );
