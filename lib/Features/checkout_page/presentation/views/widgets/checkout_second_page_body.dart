@@ -4,8 +4,8 @@ import 'package:open_fashion/Core/utils/app_styles.dart';
 import 'package:open_fashion/Core/widgets/custom_button.dart';
 import 'package:open_fashion/Core/widgets/header.dart';
 import 'package:open_fashion/Features/checkout_page/data/models/order_model.dart';
-import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/adress_section.dart';
 import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/button_methods.dart';
+import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/custom_dialog.dart';
 import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/total_row.dart';
 
 class CheckoutSecondPageBody extends StatelessWidget {
@@ -24,7 +24,7 @@ class CheckoutSecondPageBody extends StatelessWidget {
               children: [
                 Header(title: 'checkout'),
                 Text("Shipping adress".toUpperCase(), style: AppStyles.bodyMedium(context)),
-                
+
                 ButtonMethods(orderModel: orderModel),
                 const Spacer(),
                 TotalRow(title: 'Total:', totalPrice: orderModel.totalPrice),
@@ -33,7 +33,13 @@ class CheckoutSecondPageBody extends StatelessWidget {
             ),
           ),
         ),
-        CustomButton(title: "Place order".toUpperCase(), icon: AppAssets.iconsShoppingbag, onPressed: () {}),
+        CustomButton(
+          title: "Place order".toUpperCase(),
+          icon: AppAssets.iconsShoppingbag,
+          onPressed: () {
+            customDialog(context);
+          },
+        ),
       ],
     );
   }

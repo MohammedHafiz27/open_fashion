@@ -20,26 +20,44 @@ class CheckoutPageBody extends StatefulWidget {
 
 class _CheckoutPageBodyState extends State<CheckoutPageBody> {
   ValueNotifier<int> itemCount = ValueNotifier(1);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Header(title: 'checkout'),
-        CheckoutItem(productModel: widget.productModel, itemCount: itemCount),
-        CartTextField(hintText: 'Add Promo Code', prefixIcon: AppAssets.iconsVoucher, suffix: null),
-        CartTextField(hintText: 'Delivery', prefixIcon: AppAssets.iconsDoortoDoorDelivery, suffix: "Free"),
-        Spacer(),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: ValueListenableBuilder(
-            valueListenable: itemCount,
-            builder: (context, value, child) =>
-                TotalRow(title: "EST. Total", totalPrice: widget.productModel.price * value),
+        Expanded(
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: Header(title: 'checkout')),
+              SliverToBoxAdapter(
+                child: CheckoutItem(productModel: widget.productModel, itemCount: itemCount),
+              ),
+              SliverToBoxAdapter(
+                child: CartTextField(hintText: 'Add Promo Code', prefixIcon: AppAssets.iconsVoucher, suffix: null),
+              ),
+              SliverToBoxAdapter(
+                child: CartTextField(
+                  hintText: 'Delivery',
+                  prefixIcon: AppAssets.iconsDoortoDoorDelivery,
+                  suffix: "Free",
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: ValueListenableBuilder(
+                    valueListenable: itemCount,
+                    builder: (context, value, child) =>
+                        TotalRow(title: "EST. Total", totalPrice: widget.productModel.price * value),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-        SizedBox(height: 16),
+
         CustomButton(
-          title: 'checkout'.toUpperCase(),
+          title: 'CHECKOUT',
           icon: AppAssets.iconsShoppingbag,
           onPressed: () {
             context.push(

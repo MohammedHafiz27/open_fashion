@@ -51,7 +51,7 @@ abstract class AppRoute {
           GoRoute(
             path: AppRoute.paymentMethodScreen,
             builder: (BuildContext context, GoRouterState state) {
-              return const PaymentMethodPage();
+              return PaymentMethodPage(orderNotifier: state.extra as ValueNotifier<OrderModel>);
             },
           ),
         ],
