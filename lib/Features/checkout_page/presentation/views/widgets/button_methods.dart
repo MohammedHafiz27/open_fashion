@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:open_fashion/Core/utils/app_styles.dart';
 import 'package:open_fashion/Core/utils/go_route.dart';
 import 'package:open_fashion/Features/checkout_page/data/models/order_model.dart';
+import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/adress_section.dart';
 import 'package:open_fashion/Features/checkout_page/presentation/views/widgets/custom_place_order_button.dart';
 
 class ButtonMethods extends StatelessWidget {
@@ -22,7 +23,7 @@ class ButtonMethods extends StatelessWidget {
                 },
                 child: const CustomPlaceOrderButton(suffix: null, title: "Add Shipping Adress", icon: Icons.add),
               )
-            : SizedBox.shrink(),
+            : AdressSection(orderModel: orderModel),
         const SizedBox(height: 30),
         Text("Shipping Method".toUpperCase(), style: AppStyles.bodyMedium(context)),
         const CustomPlaceOrderButton(suffix: "Free", title: "Pickup at store", icon: Icons.keyboard_arrow_down),
