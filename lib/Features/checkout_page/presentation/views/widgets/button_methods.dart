@@ -25,18 +25,13 @@ class ButtonMethods extends StatelessWidget {
             : SizedBox.shrink(),
         const SizedBox(height: 30),
         Text("Shipping Method".toUpperCase(), style: AppStyles.bodyMedium(context)),
-        GestureDetector(
-          onTap: () {},
-          child: const CustomPlaceOrderButton(
-            suffix: "Free",
-            title: "Pickup at store",
-            icon: Icons.keyboard_arrow_down,
-          ),
-        ),
+        const CustomPlaceOrderButton(suffix: "Free", title: "Pickup at store", icon: Icons.keyboard_arrow_down),
         const SizedBox(height: 30),
         Text("Payment method".toUpperCase(), style: AppStyles.bodyMedium(context)),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            context.push(AppRoute.paymentMethodScreen);
+          },
           child: const CustomPlaceOrderButton(
             suffix: null,
             title: "select payment method",

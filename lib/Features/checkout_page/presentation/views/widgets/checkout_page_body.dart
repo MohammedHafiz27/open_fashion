@@ -45,6 +45,7 @@ class _CheckoutPageBodyState extends State<CheckoutPageBody> {
             context.push(
               AppRoute.checkoutSecondScreen,
               extra: OrderModel(
+                paymentMethod: null,
                 addressModel: null,
                 product: widget.productModel,
                 quantity: itemCount.value,
